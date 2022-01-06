@@ -1,0 +1,1 @@
+cmd administrator disable

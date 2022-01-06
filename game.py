@@ -1,0 +1,45 @@
+from turtle import *
+shape("turtle")
+
+#starting position
+
+
+#penup()
+#right(90)
+#forward(50)
+#left(90)
+#forward(150)
+#right(90)
+#forward(100)
+#right(90)
+#forward(75)
+#right(90)
+#forward(50)
+#pendown()
+
+#game map
+
+back(50)
+forward(50)
+left(90)
+forward(75)
+back(75)
+left(270)
+forward(150)
+back(50)
+right(90)
+forward(100)
+back(25)
+right(90)
+forward(100)
+right(90)
+forward(25)
+penup()
+forward(125)
+pendown()
+left(90)
+forward(50)
+right(90)
+forward(45)
+right(45)
+forward(25)

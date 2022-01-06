@@ -1,0 +1,17 @@
+print("Hello world!")
+print("Join VYPR Today!")
+print("now print out two phrases of your choice so that you can get used to writing the statments")
+print("Hello world")
+print("Hello")
+print("world")
+print("Hello \n world")
+print("Hello","world")
+print("Hello"+"world")
+
+print()
+
+name = input("what is your name?")
+print("Hello", name)
+age = input("What is your age?")
+print("Hello", name," you are",age,"years olds")
+input()
