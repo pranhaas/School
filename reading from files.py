@@ -17,6 +17,7 @@ def menu():
         leave()
     else:
         print("invalid choice")
+        menu()
 
 
 
