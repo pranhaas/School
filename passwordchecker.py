@@ -1,27 +1,58 @@
 import random
-import re
+
 
 def passcheck():
-    score = 0
-    passw = input("What is your password?\n")
-    allowed = list("qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM!$%&*()_-+=1234567890")
-    not_allowed_bad_human_stuff = ["qwe","rty","uio","QWE","RTY","UIO","asd","fgh", "jkl", "ASD", "FGH", "JKL", "zxc", "vbn", "ZXC", "VBN"]
-    if (len(passw)<8) or (len(passw)>24):
+    password = input("Enter a password: \n")
+
+    #for i in list(password):
+    if (len(password)<8) or (len(password)>24):
         print("Error!\npassword needs to be between 8 and 24")
         passcheck()
-    else:
-        for i in allowed:
-            score = score + 1
-            print(score)
-    print(allowed)
-    
-    if socre > 15:
-        print("Your password is strong!")
-    elif score <15 and >7:
-        print("Password is moderate in strenth")
-    else: 
-        print("PASSWORD IS VERY WEEK!!")
 
+    for i in list(password):
+        #FAKE NEWS!!
+        capsone = False
+        lower = False
+        num = False
+        symbols = False
+
+        #points bit
+        global points
+        points = 0
+        points = points + len(password)
+        for i in password:
+            if i in "qwertyuiopasdfghjklzxcvbnm":
+                lower = True
+            elif i in "QWERTYUIOPASDFGHJKLZXCVBNM":
+                capsone = True
+            elif i in "1234567890":
+                num = True
+            elif i in "!$%^&*()-_=+":
+                symbols = True
+            #adding points
+        if lower == True:
+            points = points + 5
+        elif capsone == True:
+            points = points + 5
+        elif num == True:
+            points = points + 5
+        elif symbols == True:
+            points = points + 5
+        elif symbols and num and capsone and lower == True:
+            points = points + 10
+            #subtracting points
+
+            #letters only 
+        elif num == False and symbols == False:
+            points = points - 5
+            #num only 
+        elif lower == False and capsone == False and symbols == False:
+            points = points - 5
+            #symbols only
+        elif lower == False and capsone == False and num == False:
+            points = points - 5
+
+    print(points)
 
     menu()
 def genpass():
@@ -57,4 +88,7 @@ def menu():
         genpass()
     if what == 3:
         leave()
+    else:
+        print("Error!\nPlease Type 1, 2 or 3")
+        menu()
 menu()
