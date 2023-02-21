@@ -1,0 +1,7 @@
+speed = int(input("what is the speed? (mph)"))
+time = float(input("how long have you been travling (hrs)"))
+print(f"The distance is {speed*time} miles")
+distance = int(input("What distance would you like to go?"))
+time = float(input("How long?"))
+print(f"you will have to go {distance/time}mph")
+input()
